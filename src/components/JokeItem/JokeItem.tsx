@@ -9,14 +9,13 @@ interface JokeItemProps {
 const JokeItem: FC<JokeItemProps> = ({value}) => {
   return (
     <motion.div
+      className="joke-item"
       initial={{opacity: 0, x: -30}}
       animate={{opacity: 1, x: 0}}
       exit={{opacity: 0, scale: .8}}
       transition={{duration: 0.3}}
     >
-      <div className="joke-item">
-        <span>{value}</span>
-      </div>
+      <span>{value}</span>
     </motion.div>
   );
 };

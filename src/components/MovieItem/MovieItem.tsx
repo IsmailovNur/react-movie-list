@@ -1,5 +1,6 @@
 import type {FC} from "react";
 import "./MovieItem.css";
+import { motion } from "framer-motion";
 
 interface MovieItemProps {
   id: string;
@@ -11,7 +12,13 @@ interface MovieItemProps {
 const MovieItem: FC<MovieItemProps> = (props) => {
   const {id, name, onEditMovie, onDeleteMovie} = props;
   return (
-    <div className="movie-item">
+    <motion.div
+      initial={{opacity: 0, x: -30}}
+      animate={{opacity: 1, x: 0}}
+      exit={{opacity: 0, scale: .8}}
+      transition={{duration: 0.3}}
+      className="movie-item"
+    >
       <input
         type="text"
         className="movie-edit-input"
@@ -28,7 +35,7 @@ const MovieItem: FC<MovieItemProps> = (props) => {
           <path d="m6 6 12 12" />
         </svg>
       </button>
-    </div>
+    </motion.div>
   );
 };
 
