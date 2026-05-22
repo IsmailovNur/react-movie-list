@@ -11,7 +11,7 @@ const MovieForm: FC<MovieFormProps> = ({onAddMovie}) => {
   const submitHandler = (e: React.SubmitEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (movieName.trim()) {
-      onAddMovie(movieName);
+      onAddMovie(movieName.trim());
       setMovieName('');
     }
   };

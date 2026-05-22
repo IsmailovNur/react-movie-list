@@ -1,0 +1,42 @@
+.movie-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.movie-edit-input {
+  flex-grow: 1;
+  padding: 5px 10px;
+  border: 2px solid #333;
+  outline: none;
+  border-radius: 4px;
+}
+
+.movie-edit-input:focus {
+  border-color: #65b6c4;
+}
+
+.movie-delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.movie-delete-btn svg {
+  display: block;
+}
+
+.movie-delete-btn:hover {
+  color: red;
+}
+
+.list-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.empty-message {
+  color: #ccc;
+  font-style: italic;
+}
