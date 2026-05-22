@@ -1,5 +1,6 @@
 import "./MovieForm.css";
 import React, {type FC, useState} from "react";
+import Button from "../../shared/Button/Button.tsx";
 
 interface MovieFormProps {
   onAddMovie: (name: string) => void;
@@ -28,12 +29,12 @@ const MovieForm: FC<MovieFormProps> = ({onAddMovie}) => {
         value={movieName}
         onChange={(e) => setMovieName(e.target.value)}
       />
-      <button
+      <Button
         type="submit"
         className="movie-add-btn"
       >
         Add Movie
-      </button>
+      </Button>
     </form>
   );
 };
